@@ -1,0 +1,21 @@
+<body>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">{{ site.name }}</a>
+      </div>
+      <ul class="nav navbar-nav">
+        {% assign navPages = site.pages | sort: 'order' %}
+        {% for navPage in navPages %}
+          {% unless navPage.hidden %}
+            {% if navPage.url == page.url %}
+              <li class="active"><a href="{{ navPage.url }}">{{ navPage.title }}</a></li>
+            {% else %}
+              <li><a href="{{ navPage.url }}">{{ navPage.title }}</a></li>
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+  <div class="content">

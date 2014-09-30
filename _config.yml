@@ -1,0 +1,8 @@
+# Site Options (Change these)
+name: Your Site Name Here
+copyright: Some copyright or license text should go here
+enable_fontawesome: false
+
+# Build Options
+markdown: rdiscount
+exclude: ['README.md']
